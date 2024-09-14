@@ -14,7 +14,7 @@ export default function NavLink({
     <Link
       href={href}
       {...props}
-      className={`text-primary-foreground hover:bg-primary rounded-t-md p-3 ${isActive && "bg-primary"}`}
+      className={`text-primary-foreground hover:bg-primary rounded-t-md xl:p-3 p-2 text-sm xl:text-base ${isActive && "bg-primary"} text-nowrap	`}
     >
       {props.children}
     </Link>

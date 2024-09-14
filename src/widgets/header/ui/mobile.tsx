@@ -21,7 +21,7 @@ export default function MobileMenu() {
       </SheetTrigger>
       <SheetContent className="bg-white">
         <SheetHeader>
-          <SheetTitle>Are you absolutely sure?</SheetTitle>
+          <SheetTitle>HarmonyHR</SheetTitle>
           <SheetDescription className="flex flex-col gap-2 text-lg">
             <MobileLink href={"/"}>Home</MobileLink>
             <MobileLink href={"/my-info"}>My Info</MobileLink>

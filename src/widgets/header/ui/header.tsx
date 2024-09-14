@@ -3,7 +3,6 @@ import Logo from "./logo";
 import Navbar from "./navbar";
 import Search from "./search";
 import Actions from "./actions";
-import MobileMenu from "./mobile";
 
 export default function Header() {
   return (
@@ -11,7 +10,6 @@ export default function Header() {
       <Logo />
       <Navbar />
       <Search />
-      <MobileMenu />
       <Actions />
     </header>
   );

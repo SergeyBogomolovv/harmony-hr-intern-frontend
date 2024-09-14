@@ -14,7 +14,7 @@ export default function MobileLink({
     <Link
       href={href}
       {...props}
-      className={`rounded-lg ${isActive && "bg-secondary text-black"}`}
+      className={`rounded-lg ${isActive && "bg-secondary text-black"} p-2 text-center`}
     >
       {props.children}
     </Link>
