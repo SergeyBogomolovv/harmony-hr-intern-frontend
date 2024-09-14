@@ -44,7 +44,12 @@ const errorLink = onError(({ graphQLErrors, operation, forward }) => {
     for (const err of graphQLErrors) {
       switch (err.extensions?.code) {
         case "UNAUTHENTICATED":
-          if (operation.operationName === "Refresh") return;
+          if (
+            operation.operationName === "Refresh" ||
+            operation.operationName === "Login"
+          ) {
+            return;
+          }
           return fromPromise(
             getNewToken().then((token) => {
               operation.setContext({
