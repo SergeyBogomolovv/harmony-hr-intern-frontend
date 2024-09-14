@@ -1,0 +1,22 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
+
+export default function NavLink({
+  href,
+  ...props
+}: React.ComponentProps<typeof Link>) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <Link
+      href={href}
+      {...props}
+      className={`text-primary-foreground hover:bg-primary rounded-t-md p-3 ${isActive && "bg-primary"}`}
+    >
+      {props.children}
+    </Link>
+  );
+}
