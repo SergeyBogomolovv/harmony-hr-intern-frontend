@@ -1,3 +1,3 @@
 export default function PersonalPage() {
-  return <div>PersonalPage</div>;
+  return <div className="flex-1 bg-white">PersonalPage</div>;
 }

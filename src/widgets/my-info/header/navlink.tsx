@@ -2,18 +2,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLink({
+export default function MyInfoNavLink({
   href,
   ...props
 }: React.ComponentProps<typeof Link>) {
   const pathname = usePathname();
-  const isActive = pathname === href || pathname.startsWith(`${href}/`);
+  const isActive = pathname === href;
 
   return (
     <Link
       href={href}
       {...props}
-      className={`text-primary-foreground hover:bg-primary rounded-t-md xl:p-3 p-2 text-sm xl:text-base ${isActive && "bg-primary"} text-nowrap`}
+      className={`w-full text-center text-primary-foreground bg-primary rounded-t-md p-2 text-sm xl:text-base ${isActive && "bg-white"} text-nowrap`}
     >
       {props.children}
     </Link>
