@@ -24,7 +24,7 @@ export const description =
   "A simple login form with email and password. The submit button says 'Sign in'.";
 
 export function LoginForm() {
-  const { form, onSubmit } = useLogin();
+  const { form, onSubmit, loading } = useLogin();
 
   return (
     <Form {...form}>
@@ -78,7 +78,7 @@ export function LoginForm() {
           </CardContent>
           <CardFooter className="flex flex-col gap-2">
             <FormError error={form.formState.errors.root?.message} />
-            <Button type="submit" className="w-full">
+            <Button disabled={loading} type="submit" className="w-full">
               Sign in
             </Button>
           </CardFooter>
