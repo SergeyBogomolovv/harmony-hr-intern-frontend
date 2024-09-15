@@ -8,7 +8,7 @@ export default function MyInfoLayout({
   return (
     <div className="flex flex-col flex-1">
       <MyInfoHeader />
-      <div className="grid lg:grid-cols-[1fr_5fr] flex-1 lg:gap-10 md:w-[90%] w-full mx-auto">
+      <div className="grid lg:grid-cols-[1fr_5fr] flex-1 lg:gap-10 md:w-[90%] w-full mx-auto overflow-x-auto">
         <MyInfoSideBar />
         {children}
       </div>
